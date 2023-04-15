@@ -8,6 +8,7 @@ import shelter from "../access/img/shelter-dog.jpg"
 import bookShop from "../access/img/book-shop.jpg"
 import socialNetwork from "../access/img/social-network.jpg"
 import tracking from "../access/img/tracking.jpg"
+import sectionCommon from "../common/styles/Container.module.css";
 
 export type ProjectsType = {
     id:string
@@ -21,7 +22,7 @@ export const Projects = () => {
         {id:v1(),img:socialNetwork,titleProject:'APPLICATION FOR SOCIAL NETWORK '},
         {id:v1(),img:tracking,titleProject:'APPLICATION FOR TASK TRACING'},
     ])
-    return (<div className={cl.projects}>
+    return (<div className={`${sectionCommon.section} ${cl.projects}`}>
             <div className={containerStyle.mainContainer}>
                 <span className={titleStyle.title}>Projects</span>
                 <h2 className={titleStyle.mainTitle}>Creative Projects</h2>

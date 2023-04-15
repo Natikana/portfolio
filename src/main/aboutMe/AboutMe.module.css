@@ -9,11 +9,11 @@
     display: flex;
     align-items: center;
 }
-.aboutMePart {
+/*.aboutMePart {
     width: 200px;
     height: 350px;
     border: dimgrey solid 1px;
-}
+}*/
 h1 {
     font-weight: 900;
     font-size: 38px;

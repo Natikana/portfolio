@@ -2,9 +2,12 @@ import React from "react";
 import cl from "./Contact.module.css"
 import containerStyle from "../common/styles/Container.module.css"
 import titleStyle from "../common/styles/Container.module.css";
+import btn from "../common/styles/Container.module.css";
+import text from "../common/styles/Container.module.css";
+import sectionCommon from "../common/styles/Container.module.css";
 
 export const Contact = () => {
-    return (<div className={cl.contact}>
+    return (<div className={`${sectionCommon.section} ${cl.contact}`}>
             <div className={containerStyle.mainContainer}>
                 <span className={titleStyle.title}>Contact</span>
                 <h2 className={titleStyle.mainTitle}>Get in Touch</h2>
@@ -15,6 +18,29 @@ export const Contact = () => {
                             width="100%" height="355" style={{border:0}} loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
+                </div>
+                <div className={cl.fields}>
+                    <form >
+                        <div className={cl.form}>
+                            <div className={cl.first}>
+                                <ul className={cl.input}>
+                                    <li className={cl.contactFields}>
+                                        <input id="name" type="text" placeholder="Name"/>
+                                    </li>
+                                    <li className={cl.contactFields}>
+                                        <input id="email" type="text" placeholder="Email"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className={cl.last}>
+                                <textarea id="message" placeholder="Message"></textarea>
+                            </div>
+                            <button className={btn.commonBtn}>
+                                <span className={`${text.generelText} ${cl.textBtn}`}>Send message</span>
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>

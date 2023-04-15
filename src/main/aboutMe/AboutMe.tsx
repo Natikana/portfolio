@@ -3,13 +3,14 @@ import cl from "./AboutMe.module.css"
 import fb from "../../access/socialLogo/fb.png"
 import inL from "../../access/socialLogo/in.png"
 import gh from "../../access/socialLogo/gh.png"
+import cvFoto from "../../access/img/cv-foto.jpg"
 
 export const AboutMe = () => {
     return (
         <div className={cl.aboutMe}>
             <div className={cl.details}>
                 {/*<div className={cl.aboutMe}>*/}
-                <img className={cl.aboutMePart}  src={'#'} alt={'fotoCV'} />
+                <img className={cl.aboutMePart}  src={cvFoto} height={'390px'} width={'300px'} alt={'fotoCV'} />
                 {/*</div>*/}
                 <div className={cl.aboutMeDescrbPart}>
                     <h1>NATALLIA MASHKOUSKAYA</h1>

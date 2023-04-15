@@ -4,6 +4,7 @@ import cl from "./Skills.module.css"
 import containerStyle from "../common/styles/Container.module.css"
 import titleStyle from "../common/styles/Container.module.css"
 import {v1} from "uuid";
+import sectionCommon from "../common/styles/Container.module.css";
 
 
 export const Skills = () => {
@@ -21,7 +22,7 @@ export const Skills = () => {
         {id:v1(), skill:'Postman', img:'http://www.w3.org/2000/svg'},
         {id:v1(), skill:'Git (GitHub)', img:'http://www.w3.org/2000/svg'},
     ])
-    return (<div className={cl.skills}>
+    return (<div className={`${sectionCommon.section} ${skills}`}>
             <div className={containerStyle.mainContainer}>
                 <span className={titleStyle.title}>Skills</span>
                 <h2 className={titleStyle.mainTitle}>Programming Skills</h2>
