@@ -1,7 +1,6 @@
 .skillSection {
     display: flex;
     flex-wrap: wrap;
-
 }
 .skillText {
     font-family: 'Segoe UI', sans-serif;
