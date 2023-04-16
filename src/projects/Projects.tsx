@@ -19,8 +19,8 @@ export const Projects = () => {
     const [projects, SetProjects] = useState<ProjectsType[]>([
         {id:v1(),img:shelter,titleProject:'SHELTER'},
         {id:v1(),img:bookShop,titleProject:'BOOK SHOP'},
-        {id:v1(),img:socialNetwork,titleProject:'APPLICATION FOR SOCIAL NETWORK '},
-        {id:v1(),img:tracking,titleProject:'APPLICATION FOR TASK TRACING'},
+        {id:v1(),img:socialNetwork,titleProject:'APP FOR SOCIAL NETWORK '},
+        {id:v1(),img:tracking,titleProject:'APP FOR TASK TRACING'},
     ])
     return (<div className={`${sectionCommon.section} ${cl.projects}`}>
             <div className={`${containerStyle.mainContainer} ${cl.projectsContainer}`}>

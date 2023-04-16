@@ -18,9 +18,19 @@
         width: 90%;
     }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 480px) {
     .projectsContainer {
         width: 90%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .projectsContainer {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1079px) {
+    .projectsContainer {
+        width: 55%;
     }
     .projectsSection {
         justify-content: center;
