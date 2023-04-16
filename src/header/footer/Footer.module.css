@@ -1,22 +1,15 @@
-.footerMenu {
-    display: flex;
-    justify-content: space-between;
-}
-.socialIcon {
-    width: 30px;
-    height: 30px;
-    background-color: dimgrey;
-}
 p {
     margin: 0;
 }
+
 .creator {
     font-size: 14px;
     font-weight: 500;
     color: #575555;
 }
+
 @media screen and (max-width: 768px) {
-    .footerMenu {
+    .footer {
         display: none;
     }
 }

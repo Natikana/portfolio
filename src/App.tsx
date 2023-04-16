@@ -11,14 +11,13 @@ function App() {
     return (
         <div className={cl.app}>
             <Header/>
-           <div className={cl.section}>
-               <Main/>
-               <Skills/>
-               <Projects/>
-               <Freelance/>
-               <Contact/>
-           </div>
-
+            <div className={cl.section}>
+                <Main/>
+                <Skills/>
+                <Projects/>
+                <Freelance/>
+                <Contact/>
+            </div>
         </div>
     )
 

@@ -11,7 +11,7 @@
 
 .title {
     display: inline-block;
-    background-color: rgba(0,0,0,.04);
+    background-color: rgba(0, 0, 0, .04);
     padding: 4px 10px;
     text-transform: uppercase;
     font-weight: 800;
@@ -20,6 +20,7 @@
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0;
 }
+
 h2 {
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +29,7 @@ h2 {
     font-size: 30px;
     margin: 11px 0 65px 0;
 }
+
 @media screen and (max-width: 768px) {
     .skillsSection {
         gap: 30px;

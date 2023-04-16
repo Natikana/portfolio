@@ -1,11 +1,11 @@
 .app {
     margin-left: 350px;
 }
-.section {
 
-}
 @media screen and (max-width: 768px) {
     .app {
+        display: flex;
+        flex-direction: column;
         margin-left: 0;
     }
 }

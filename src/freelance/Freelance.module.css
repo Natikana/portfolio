@@ -3,30 +3,36 @@
     flex-direction: column;
     align-items: flex-start;
 }
+
 .textContainer {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 50px;
 }
+
 .textMain {
     font-size: 50px;
     padding: 0 0 50px 0;
     line-height: unset;
 }
+
 .textBtn {
     color: white;
     font-size: 15px;
 }
+
 @media screen and (max-width: 992px) {
     .freelanceSection {
         align-items: center;
     }
 }
+
 @media screen and (max-width: 768px) {
     .textMain {
         font-size: 35px;
     }
 }
+
 @media screen and (max-width: 480px) {
     .freelanceSection {
         padding: 20px;

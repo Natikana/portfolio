@@ -9,6 +9,5 @@ export const Header = () => {
             <SideBar/>
             <Footer/>
         </div>
-
     )
 }

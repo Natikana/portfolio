@@ -52,8 +52,4 @@ h1 {
         font-size: 30px;
     }
 }
-@media screen and (max-width: 320px) {
-    h1 {
-        font-size: 30px;
-    }
-}
+
