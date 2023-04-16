@@ -8,23 +8,26 @@
     justify-content: space-between;
     gap: 40px;
 }
-/*
-.title {
-    display: inline-block;
-    background-color: rgba(0,0,0,.04);
-    padding: 4px 10px;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 14px;
-    color: #575555;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0;
+@media screen and (max-width: 1560px) {
+    .projectsContainer {
+        width: 80%;
+    }
 }
-h2 {
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.4;
-    color: #000;
-    font-size: 30px;
-    margin: 11px 0 65px 0;
-}*/
+@media screen and (max-width: 1420px) {
+    .projectsContainer {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .projectsContainer {
+        width: 90%;
+    }
+    .projectsSection {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .projectsContainer {
+        width: 100%;
+    }
+}

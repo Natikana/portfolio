@@ -50,3 +50,20 @@ h2 .mainTitle {
     border: none;
     cursor: pointer;
 }
+@media screen and (max-width: 1066px) {
+    .mainContainer {
+        width: 55%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .mainContainer {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mainContainer {
+        width: 100%;
+    }
+}

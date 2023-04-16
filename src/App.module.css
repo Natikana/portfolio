@@ -4,3 +4,8 @@
 .section {
 
 }
+@media screen and (max-width: 768px) {
+    .app {
+        margin-left: 0;
+    }
+}

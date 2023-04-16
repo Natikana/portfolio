@@ -13,7 +13,7 @@ export const Freelance = () => {
                 <span className={titleStyle.title}>Freelance</span>
                 <h2 className={titleStyle.mainTitle}>My Freelance</h2>
                 <div className={cl.freelanceSection}>
-                    <span className={`${text.generelText} ${cl.textMain}`}>I Am Available For Freelance Work</span>
+                        <span className={`${text.generelText} ${cl.textMain}`}>I Am Available For Freelance Work</span>
                     <button className={btn.commonBtn}>
                        <span className={`${text.generelText} ${cl.textBtn}`}>Hire me</span>
                     </button>

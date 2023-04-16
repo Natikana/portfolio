@@ -1,7 +1,16 @@
-
 .project {
     display: flex;
     flex-direction: column;
+}
+.projectImg {
+    min-width: 100%;
+    height: 260px;
+}
+@media screen and (max-width: 320px) {
+    .projectImg {
+        width: 320px;
+        height: 200px;
+    }
 }
 
 

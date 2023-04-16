@@ -10,10 +10,10 @@ export const AboutMe = () => {
         <div className={cl.aboutMe}>
             <div className={cl.details}>
                 {/*<div className={cl.aboutMe}>*/}
-                <img className={cl.aboutMePart}  src={cvFoto} height={'390px'} width={'300px'} alt={'fotoCV'} />
+                <img className={cl.aboutMePart}  src={cvFoto} height={'340px'} width={'300px'} alt={'fotoCV'} />
                 {/*</div>*/}
                 <div className={cl.aboutMeDescrbPart}>
-                    <h1>NATALLIA MASHKOUSKAYA</h1>
+                    <h1 className={cl.aboutMeTitle}>NATALLIA MASHKOUSKAYA</h1>
                     <span className={cl.mainText}>I am a Frontend Developer</span>
                     <div className={cl.aboutMeSocialIcons}>
                         <a href={'#'}>

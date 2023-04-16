@@ -23,7 +23,7 @@ export const Projects = () => {
         {id:v1(),img:tracking,titleProject:'APPLICATION FOR TASK TRACING'},
     ])
     return (<div className={`${sectionCommon.section} ${cl.projects}`}>
-            <div className={containerStyle.mainContainer}>
+            <div className={`${containerStyle.mainContainer} ${cl.projectsContainer}`}>
                 <span className={titleStyle.title}>Projects</span>
                 <h2 className={titleStyle.mainTitle}>Creative Projects</h2>
                 <div className={cl.projectsSection}>

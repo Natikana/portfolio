@@ -8,7 +8,7 @@ export const Project = (props:ProjectsType) => {
     return (
             <div className={cl.project}>
                 <a href={'#'} className={cl.link}>
-                    <img src={props.img}  width={'400px'} height={'260px'} alt={'dog'}/>
+                    <img className={cl.projectImg} src={props.img} alt={'dog'}/>
                 </a>
                 <span className={text.generelText}>{props.titleProject}</span>
             </div>
