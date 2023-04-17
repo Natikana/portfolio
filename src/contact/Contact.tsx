@@ -5,12 +5,12 @@ import titleStyle from "../common/styles/Container.module.css";
 import btn from "../common/styles/Container.module.css";
 import text from "../common/styles/Container.module.css";
 import sectionCommon from "../common/styles/Container.module.css";
+import {Title} from "../common/components/title/Title";
 
 export const Contact = () => {
-    return (<div className={`${sectionCommon.section} ${cl.contact}`}>
+    return (<div id={'contact'} className={`${sectionCommon.section} ${cl.contact}`}>
             <div className={containerStyle.mainContainer}>
-                <span className={titleStyle.title}>Contact</span>
-                <h2 className={titleStyle.mainTitle}>Get in Touch</h2>
+                <Title text={'Contact'} title={'Get in Touch'}/>
                 <div className={cl.contactBlock}>
                     <div className={cl.mapSection}>
                         <div className={cl.map}>
@@ -36,11 +36,10 @@ export const Contact = () => {
                                 <div className={cl.last}>
                                     <textarea id="message" placeholder="Message"></textarea>
                                 </div>
-                                <button className={btn.commonBtn}>
+                                <button type={"submit"} className={btn.commonBtn}>
                                     <span className={`${text.generelText} ${cl.textBtn}`}>Send message</span>
                                 </button>
                             </div>
-
                         </form>
                     </div>
                 </div>

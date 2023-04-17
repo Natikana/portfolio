@@ -5,13 +5,13 @@ import titleStyle from "../common/styles/Container.module.css";
 import text from "../common/styles/Container.module.css";
 import btn from "../common/styles/Container.module.css";
 import sectionCommon from "../common/styles/Container.module.css";
+import {Title} from "../common/components/title/Title";
 
 
 export const Freelance = () => {
-    return (<div className={sectionCommon.section}>
+    return (<div id={"freelance"} className={sectionCommon.section}>
             <div className={containerStyle.mainContainer}>
-                <span className={titleStyle.title}>Freelance</span>
-                <h2 className={titleStyle.mainTitle}>My Freelance</h2>
+                <Title text={'Freelance'} title={'My Freelance'}/>
                 <div className={cl.freelanceSection}>
                     <span className={`${text.generelText} ${cl.textMain}`}>I Am Available For Freelance Work</span>
                     <button className={btn.commonBtn}>

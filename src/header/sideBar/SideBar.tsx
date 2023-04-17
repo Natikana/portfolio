@@ -4,10 +4,11 @@ import text from "../../common/styles/Container.module.css";
 
 export const SideBar = () => {
     const [links, setLinks] = useState([
-        {title: 'About me', href: '#'},
-        {title: 'Skills', href: '#'},
-        {title: 'Projects', href: '#'},
-        {title: 'Contact', href: '#'},
+        {title: 'About me', href: '#aboutMe'},
+        {title: 'Skills', href: '#skills'},
+        {title: 'Projects', href: '#projects'},
+        {title: 'Freelance', href: '#freelance'},
+        {title: 'Contact', href: '#contact'},
     ])
     return (
         <div className={cl.sideBar}>

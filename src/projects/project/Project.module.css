@@ -1,6 +1,20 @@
 .project {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.project::before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 40%;
+}
+.link {
+    text-decoration: none;
 }
 .projectImg {
     width: 400px;

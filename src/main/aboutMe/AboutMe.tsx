@@ -7,9 +7,9 @@ import cvFoto from "../../access/img/cv-foto.jpg"
 
 export const AboutMe = () => {
     return (
-        <div className={cl.aboutMe}>
+        <div id={"aboutMe"} className={cl.aboutMe}>
             <div className={cl.details}>
-                <img className={cl.aboutMePart} src={cvFoto} height={'340px'} width={'290px'} alt={'fotoCV'}/>
+                <img className={cl.aboutMePart} src={cvFoto} height={'340px'} width={'270px'} alt={'fotoCV'}/>
                 <div className={cl.aboutMeDescrbPart}>
                     <h1 className={cl.aboutMeTitle}>NATALLIA MASHKOUSKAYA</h1>
                     <span className={cl.mainText}>I am a Frontend Developer</span>

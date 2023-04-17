@@ -12,7 +12,7 @@
     align-items: flex-start;
 }
 
-.first {
+.first, .last {
     width: 100%;
 }
 
@@ -20,13 +20,13 @@ ul {
     padding: 0;
 }
 
-li input {
+li input, .last textarea {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, .2);
     background-color: transparent;
 }
 
-input {
+input, textarea {
     padding: 10px;
     border-radius: 0;
     font-size: 15px;
@@ -44,29 +44,10 @@ input {
     margin: 0 0 30px;
 }
 
-.last {
-    width: 100%;
-}
-
 .last textarea {
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, .2);
     height: 120px;
     resize: none;
     margin-bottom: 50px;
-    background-color: transparent;
-}
-
-textarea {
-    padding: 10px;
-    border-radius: 0;
-    font-size: 15px;
-    letter-spacing: 0;
-    line-height: 1.4;
-    height: 44px;
-    transition: all .3s ease;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .textBtn {
