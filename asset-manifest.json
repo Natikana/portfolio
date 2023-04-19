@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9d9ebc98.css",
-    "main.js": "/portfolio/static/js/main.dd5bed07.js",
-    "static/media/cv-foto.jpg": "/portfolio/static/media/cv-foto.7cff79ec74fcc0138ddd.jpg",
+    "main.css": "/portfolio/static/css/main.2e7b05e3.css",
+    "main.js": "/portfolio/static/js/main.3faab9fe.js",
     "static/media/tracking.jpg": "/portfolio/static/media/tracking.655779fc8acd0803c7a7.jpg",
+    "static/media/cv-foto.jpg": "/portfolio/static/media/cv-foto.49f9d9487fb7f4388d73.jpg",
     "static/media/Mulish-VariableFont_wght.ttf": "/portfolio/static/media/Mulish-VariableFont_wght.628167929650ba4a16c7.ttf",
     "static/media/shelter-dog.jpg": "/portfolio/static/media/shelter-dog.6f32c54ce214f6bfd66d.jpg",
     "static/media/Poppins-Medium.ttf": "/portfolio/static/media/Poppins-Medium.c5eb70982e90502d0d01.ttf",
@@ -11,11 +11,11 @@
     "static/media/social-network.jpg": "/portfolio/static/media/social-network.df97c8831956e2e01b00.jpg",
     "static/media/book-shop.jpg": "/portfolio/static/media/book-shop.199626ce4ca7da4234e7.jpg",
     "index.html": "/portfolio/index.html",
-    "main.9d9ebc98.css.map": "/portfolio/static/css/main.9d9ebc98.css.map",
-    "main.dd5bed07.js.map": "/portfolio/static/js/main.dd5bed07.js.map"
+    "main.2e7b05e3.css.map": "/portfolio/static/css/main.2e7b05e3.css.map",
+    "main.3faab9fe.js.map": "/portfolio/static/js/main.3faab9fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d9ebc98.css",
-    "static/js/main.dd5bed07.js"
+    "static/css/main.2e7b05e3.css",
+    "static/js/main.3faab9fe.js"
   ]
 }
