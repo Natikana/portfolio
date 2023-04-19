@@ -1,0 +1,18 @@
+@import "../../common/styles/sass/mixins";
+
+.creator {
+  @include text(400, 15px, $commonFontFamily, $secondTextColor,);
+  line-height: 25px;
+
+  p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}
+
+

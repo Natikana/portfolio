@@ -1,0 +1,35 @@
+@import "../../common/styles/sass/mixins";
+
+.project {
+  @include display(flex, column, unset, unset);
+  max-width: 500px;
+  flex-grow: 1;
+  width: 320px;
+  .link {
+    position: relative;
+    text-decoration: none;
+
+    .projectImg {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 30px;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: black;
+      opacity: 40%;
+    }
+  }
+}
+
+
+
+
+
+

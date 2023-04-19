@@ -1,0 +1,72 @@
+@import "../../common/styles/sass/mixins";
+
+
+.aboutMe {
+  @include display(flex, row, center, center);
+  padding: 0 40px;
+  height: 100vh;
+  width: 100%;
+
+  .details {
+    @include display(flex, row, unset, center);
+
+    .foto {
+      background-image: url("../../access/img/cv-foto.jpg");
+      width: 270px;
+      height: 270px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+      box-shadow: inset 0 0 0 9px rgba(255, 255, 255, .3);
+      animation: morph 8s ease-in-out infinite 1s;
+      /*img {
+        box-shadow: inset 0 0 0 9px rgba(255,255,255,.3);
+      }*/
+      /*img {
+        border-radius: 2%;
+        filter: drop-shadow(9px 9px 9px #222);
+      }*/
+      .aboutMeFoto {
+        //position: absolute;
+        //box-shadow: inset 0 0 0 9px rgba(255,255,255,.3);
+        animation: morph 8s ease-in-out infinite 1s;
+      }
+    }
+
+    .aboutMeDescrbPart {
+      @include display(flex, column, flex-start, unset);
+      gap: 30px;
+      margin-left: 80px;
+
+      h1 {
+        @include text(900, 35px, $commonFontFamily, $titleColor);
+      }
+
+      .mainText {
+        @include text(500, 18px, $commonFontFamily, $textColor);
+        text-decoration: none;
+        line-height: 30px;
+        letter-spacing: 1.1px;
+      }
+
+      .aboutMeSocialIcons {
+        @include display(flex, row, flex-start, unset);
+        gap: 20px;
+      }
+
+      @media screen and (max-width: 1040px) {
+        margin: 40px 0 0;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 1040px) {
+      flex-direction: column;
+    }
+  }
+}
+
+
+

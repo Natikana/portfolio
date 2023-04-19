@@ -1,32 +1,46 @@
 import React from "react";
-import cl from "./AboutMe.module.css"
+import cl from "./AboutMe.module.scss"
 import fb from "../../access/socialLogo/fb.png"
 import inL from "../../access/socialLogo/in.png"
 import gh from "../../access/socialLogo/gh.png"
 import cvFoto from "../../access/img/cv-foto.jpg"
+import {v1} from "uuid";
 
+type socialIconsType = {
+    id: string
+    icon: string
+    link: string
+    textIcon: string
+}
 export const AboutMe = () => {
+    const socialIcons: socialIconsType[] = [
+        {id: v1(), icon: fb, link: 'https://www.facebook.com/natasza.natik', textIcon: 'fb'},
+        {id: v1(), icon: gh, link: 'https://github.com/Natikana', textIcon: 'gh'},
+        {id: v1(), icon: inL, link: 'https://www.linkedin.com/feed/', textIcon: 'inL'},
+    ]
+
     return (
         <div id={"aboutMe"} className={cl.aboutMe}>
             <div className={cl.details}>
-                <img className={cl.aboutMePart} src={cvFoto} height={'340px'} width={'270px'} alt={'fotoCV'}/>
+                <div className={cl.aboutMeFotoBlock}>
+                    <div className={cl.foto}></div>
+                    {/* <img className={cl.aboutMeFoto} src={cvFoto} height={'270px'} width={'270px'} alt={'fotoCV'}/>*/}
+                </div>
                 <div className={cl.aboutMeDescrbPart}>
                     <h1 className={cl.aboutMeTitle}>NATALLIA MASHKOUSKAYA</h1>
                     <span className={cl.mainText}>I am a Frontend Developer</span>
                     <div className={cl.aboutMeSocialIcons}>
-                        <a href={'#'}>
-                            <img className={cl.socialIcon} src={fb} width={'20px'} height={'20px'} alt='fb'/>
-                        </a>
-                        <a href={'#'}>
-                            <img className={cl.socialIcon} src={gh} width={'20px'} height={'20px'} alt='gh'/>
-                        </a>
-                        <a href={'#'}>
-                            <img className={cl.socialIcon} src={inL} width={'20px'} height={'20px'} alt='ln'/>
-                        </a>
+                        {socialIcons.map(el => {
+                            return (
+                                <a key={el.id} href={el.link}>
+                                    <img className={cl.socialIcon} src={el.icon} width={'20px'} height={'20px'}
+                                         alt={el.textIcon}/>
+                                </a>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

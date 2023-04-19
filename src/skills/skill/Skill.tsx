@@ -1,22 +1,19 @@
 import React from "react";
-import cl from "./Skill.module.css"
-import text from "../../common/styles/Container.module.css"
+import cl from "./Skill.module.scss"
+import text from "../../common/styles/Common.module.scss"
 
 export type SkillType = {
-    id:string
-    skill:string
-    img:string
+    id: string
+    skill: string
+    img: string
 }
 
 
-export const Skill = (props:SkillType) => {
+export const Skill = (props: SkillType) => {
     return (<div className={cl.skillSection}>
-            <div className={cl.skill}>
-                <li className={text.generelText}>
-                    {props.skill}
-                </li>
-            </div>
-    </div>
+            <img src={props.img} alt={props.skill} width={'20px'} height={'20px'}/>
+            <span className={text.generelText}>{props.skill}</span>
+        </div>
 
     )
 }

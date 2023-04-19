@@ -1,0 +1,11 @@
+@import "../../common/styles/sass/mixins";
+
+.skillSection {
+    @include display(flex,column,unset,center);
+    .skillText {
+        @include text(500, 18px, $commonFontFamily,$textColor);
+        line-height: 30px;
+        letter-spacing: 1.1px;
+    }
+}
+

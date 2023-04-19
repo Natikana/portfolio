@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import cl from "./SideBar.module.css"
-import text from "../../common/styles/Container.module.css";
+import cl from "./SideBar.module.scss"
+import text from "../../common/styles/Common.module.scss";
 
 export const SideBar = () => {
     const [links, setLinks] = useState([

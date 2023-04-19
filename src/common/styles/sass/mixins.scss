@@ -1,0 +1,19 @@
+@import "./variable.sccs";
+
+@mixin text ($fontWeight, $fontSize, $fontFamily, $colorOfText) {
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  color: $colorOfText;
+}
+
+@mixin display ($display, $flexDirection, $justifyContent, $alignItems, ) {
+  display: $display;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+//@mixin container () {
+//  width: 70%;
+//  margin: 0 auto;
+//}

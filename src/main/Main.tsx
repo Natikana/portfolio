@@ -1,7 +1,7 @@
 import React from "react";
-import cl from "./Main.module.css"
+import cl from "./Main.module.scss"
 import {AboutMe} from "./aboutMe/AboutMe";
-import containerStyle from "../common/styles/Container.module.css"
+import containerStyle from "../common/styles/Common.module.scss"
 
 export const Main = () => {
     return (<div className={cl.main}>

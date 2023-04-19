@@ -1,0 +1,15 @@
+@import "../common/styles/sass/variable.sccs";
+
+.skills {
+  background-color: $bgColor;
+
+  .skillsSection {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 300px;
+    gap: 85px;
+  }
+}
+
+
+

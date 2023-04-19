@@ -1,0 +1,46 @@
+@import "../common/styles/sass/variable.sccs";
+@import "../common/styles/sass/mixins";
+
+.contact {
+  background-color: $secondBgColor;
+
+  .contactForm {
+    @include display(flex, column, unset, flex-start);
+
+    .contactInput, .contactTextarea {
+      @include text(unset, 15px, $commonFontFamily, $secondTextColor);
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background-color: transparent;
+      padding: 10px;
+      line-height: 1.6;
+      height: 44px;
+      margin-top: 30px;
+    }
+
+    .contactTextarea {
+      height: 120px;
+      margin-bottom: 50px;
+    }
+
+    .textBtn {
+      color: white;
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 768px) {
+      align-items: center;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

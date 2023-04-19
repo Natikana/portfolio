@@ -1,0 +1,20 @@
+@import "../../../common/styles/sass/variable.sccs";
+@import "../../../common/styles/sass/mixins";
+
+.title {
+    @include text (800, 14px, $TitleH2FontFamily, $textColor);
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .04);
+    padding: 12px 10px;
+    text-transform: uppercase;
+}
+h2 {
+    @include text (800, 30px, $TitleH2FontFamily, $titleColor);
+    line-height: 1.4;
+    margin: 11px 0 65px 0;
+}
+@media screen and (max-width: 768px) {
+    .sectionTitle {
+        text-align: center;
+    }
+}

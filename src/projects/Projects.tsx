@@ -1,13 +1,13 @@
 import React, {useState} from "react";
-import cl from "./Projects.module.css"
-import containerStyle from "../common/styles/Container.module.css"
+import cl from "./Projects.module.scss"
+import containerStyle from "../common/styles/Common.module.scss"
 import {Project} from "./project/Project";
 import {v1} from "uuid";
 import shelter from "../access/img/shelter-dog.jpg"
 import bookShop from "../access/img/book-shop.jpg"
 import socialNetwork from "../access/img/social-network.jpg"
 import tracking from "../access/img/tracking.jpg"
-import sectionCommon from "../common/styles/Container.module.css";
+import sectionCommon from "../common/styles/Common.module.scss";
 import {Title} from "../common/components/title/Title";
 
 export type ProjectsType = {
@@ -26,7 +26,6 @@ export const Projects = () => {
         backgroundImage:`url(${shelter})`
     }*/
     return (<div id={"projects"} className={`${sectionCommon.section} ${cl.projects}`}>
-            <div className={`${containerStyle.mainContainer} ${cl.projectsContainer}`}>
                 <Title text={'Projects'} title={'Creative Projects'}/>
                 <div className={cl.projectsSection}>
                     {projects.map(el => {
@@ -40,8 +39,6 @@ export const Projects = () => {
                         )
                     })}
                 </div>
-
-            </div>
         </div>
     )
 }
