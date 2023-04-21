@@ -1,18 +1,16 @@
 @import "../common/styles/sass/variable.sccs";
 @import "../common/styles/sass/mixins";
 
-.projects {
-  background-color: $secondBgColor;
 
-  .projectsSection {
-    @include display(flex,row,space-between,center);
-    flex-wrap: wrap;
-    gap: 40px;
-    @media screen and (max-width: 1079px) {
-      justify-content: center;
-    }
+.projectsSection {
+  @include display(flex, row, space-between, center);
+  flex-wrap: wrap;
+  gap: 40px;
+  @media screen and (max-width: 1079px) {
+    justify-content: center;
   }
-
 }
+
+
 
 

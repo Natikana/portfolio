@@ -1,0 +1,5 @@
+declare module 'react-reveal/Fade'
+declare module 'react-tsparticles'
+declare module 'react-typing-effect'
+declare module 'react-reveal/Reveal'
+declare module 'react-scroll'

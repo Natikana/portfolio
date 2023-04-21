@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import cl from "./Projects.module.scss"
-import containerStyle from "../common/styles/Common.module.scss"
+import Fade from "react-reveal/Fade";
 import {Project} from "./project/Project";
 import {v1} from "uuid";
 import shelter from "../access/img/shelter-dog.jpg"
@@ -26,6 +26,7 @@ export const Projects = () => {
         backgroundImage:`url(${shelter})`
     }*/
     return (<div id={"projects"} className={`${sectionCommon.section} ${cl.projects}`}>
+        <Fade right duration={3000}>
                 <Title text={'Projects'} title={'Creative Projects'}/>
                 <div className={cl.projectsSection}>
                     {projects.map(el => {
@@ -39,6 +40,7 @@ export const Projects = () => {
                         )
                     })}
                 </div>
+        </Fade>
         </div>
     )
 }

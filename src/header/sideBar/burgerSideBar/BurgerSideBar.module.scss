@@ -1,0 +1,57 @@
+@import "../../../common/styles/sass/variable.sccs";
+@import "../../../common/styles/sass/mixins";
+
+.burgerSideBar {
+  //@include display(flex,column,center,center);
+  display: none;
+  width: 320px;
+  height: 100vh;
+  background-color: #fffdfd;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  .burgerSideBarBlock {
+    @include display(flex,column,center,unset);
+    padding: 100px 70px;
+    width: 100%;
+
+    h3 {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    .burgerSideBarNavBlock {
+      @include display(flex,column,flex-start,unset);
+      height: auto;
+      gap: 20px;
+
+      a {
+        text-decoration: none;
+        letter-spacing: 1.1px;
+        cursor: pointer;
+        &:hover {
+          color: $secondTextColor;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    @include display(flex,column,center,center);
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

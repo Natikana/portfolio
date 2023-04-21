@@ -4,23 +4,9 @@ import fb from "../../access/socialLogo/fb.png"
 import inL from "../../access/socialLogo/in.png"
 import gh from "../../access/socialLogo/gh.png"
 import {v1} from "uuid";
-//import Particles from 'react-particles-js';
-//import Fade from "react-reveal/Fade";
-import { Component } from 'react';
+import Fade from "react-reveal/Fade";
 import ReactTypingEffect from "react-typing-effect";
 
-export interface ReactTypingEffectProps {
-    text: string | string[];
-    staticText?: string | undefined;
-    className?: string | undefined;
-    speed?: number | undefined;
-    eraseDelay?: number | undefined;
-    eraseSpeed?: number | undefined;
-    typingDelay?: number | undefined;
-    cursor?: string | undefined;
-    cursorClassName?: string | undefined;
-    displayTextRenderer?(text: string, i: number): JSX.Element;
-}
 
 type socialIconsType = {
     id: string
@@ -28,17 +14,7 @@ type socialIconsType = {
     link: string
     textIcon: string
 }
-const particlesOpt = {
-    particles: {
-        number: {
-            value: 150,
-            density: {
-                enable: true,
-                value_area: 800
-            }
-        }
-    }
-}
+
 export const AboutMe = () => {
 
     const socialIcons: socialIconsType[] = [
@@ -49,20 +25,7 @@ export const AboutMe = () => {
 
     return (
         <div id={"aboutMe"} className={cl.aboutMe}>
-            {/*<Particles
-                params={{
-                    polygon: {
-                        enable: true,
-                        type: 'inside',
-                        move: {
-                            radius: 10
-                        },
-                        url: 'path/to/svg.svg'
-                    }
-                }} />*/}
-           {/* <Fade top>*/}
-
-
+            <Fade right duration={3000}>
                 <div className={cl.details}>
                     <div className={cl.aboutMeFotoBlock}>
                         <div className={cl.foto}></div>
@@ -70,9 +33,9 @@ export const AboutMe = () => {
                     </div>
                     <div className={cl.aboutMeDescrbPart}>
                         <h1 className={cl.aboutMeTitle}>NATALLIA MASHKOUSKAYA</h1>
-                        <span className={cl.mainText}>I am a Frontend Developer</span>
+                        {/*<span className={cl.mainText}>I am a Frontend Developer</span>*/}
                         <ReactTypingEffect
-                            text={"I am a Frontend Developer"}
+                            className={cl.mainText} text={"I am a Frontend Developer"}
                         />
                         <div className={cl.aboutMeSocialIcons}>
                             {socialIcons.map(el => {
@@ -86,7 +49,7 @@ export const AboutMe = () => {
                         </div>
                     </div>
                 </div>
-            {/*</Fade>*/}
+            </Fade>
         </div>
     )
 }

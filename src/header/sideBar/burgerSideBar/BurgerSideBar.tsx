@@ -1,21 +1,15 @@
 import React from "react";
-import cl from "./SideBar.module.scss"
-import text from "../../common/styles/Common.module.scss";
+import cl from "./BurgerSideBar.module.scss"
+import text from "../../../common/styles/Common.module.scss";
 import {Link} from "react-scroll";
-export const links:{title: string, href: string}[] = [
-    {title: 'About me', href: 'aboutMe'},
-    {title: 'Skills', href: 'skills'},
-    {title: 'Projects', href: 'projects'},
-    {title: 'Freelance', href: 'freelance'},
-    {title: 'Contact', href: 'contact'},
-]
-export const SideBar = () => {
+import {links} from "../SideBar";
+
+export const BurgerSideBar = () => {
 
     return (
-        <div className={cl.sideBar}>
-            <div className={cl.sideBarBlock}>
-                <h3>WARSAW</h3>
-                <nav className={cl.navBlock}>
+        <div className={cl.burgerSideBar}>
+            <div className={cl.burgerSideBarBlock}>
+                <nav className={cl.burgerSideBarNavBlock}>
                     {links.map((el, i) => {
                             return <Link
                                 activeClass={cl.active}
@@ -32,7 +26,6 @@ export const SideBar = () => {
                                 spyThrottle={500}
                             >{el.title}
                             </Link>
-                            /*<a className={`${text.generelText} ${cl.mainText}`} key={i} href={el.href}>{el.title}</a>*/
                         }
                     )}
                 </nav>

@@ -38,6 +38,9 @@
   height: 53px;
   border: none;
   cursor: pointer;
+  &:hover {
+    background-color: #181717;
+  }
 }
 
 

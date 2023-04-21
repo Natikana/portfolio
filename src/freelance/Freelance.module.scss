@@ -2,7 +2,6 @@
 
 .freelanceSection {
   @include display(flex, column, unset, flex-start);
-
   .textMain {
     font-size: 35px;
     padding: 0 0 50px 0;

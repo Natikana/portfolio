@@ -1,34 +1,43 @@
+@import "../../common/styles/sass/variable.sccs";
+@import "../../common/styles/sass/mixins";
+
+
 .sideBar {
-    display: flex;
-    .sideBarBlock {
-        padding: 0 70px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h3 {
-            font-size: 30px;
-            font-weight: 900;
-            letter-spacing: 4px;
-        }
-        .navBlock {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            height: auto;
-            .mainText {
-                text-decoration: none;
-                letter-spacing: 1.1px;
-            }
-        }
+  display: flex;
+
+  .sideBarBlock {
+    @include display(flex,column,center,unset);
+    padding: 0 70px;
+    width: 100%;
+
+    h3 {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 4px;
     }
 
-}
-@media screen and (max-width: 768px) {
-    .sideBar {
-        display: none;
+    .navBlock {
+      @include display(flex, column, flex-start, unset);
+      height: auto;
+
+      a {
+        text-decoration: none;
+        letter-spacing: 1.1px;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondTextColor;
+        }
+      }
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
+
+
 
 
 

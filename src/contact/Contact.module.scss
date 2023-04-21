@@ -1,8 +1,6 @@
 @import "../common/styles/sass/variable.sccs";
 @import "../common/styles/sass/mixins";
 
-.contact {
-  background-color: $secondBgColor;
 
   .contactForm {
     @include display(flex, column, unset, flex-start);
@@ -32,7 +30,7 @@
       align-items: center;
     }
   }
-}
+
 
 
 

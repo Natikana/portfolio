@@ -6,15 +6,6 @@
   padding: 0 40px;
   height: 100vh;
   width: 100%;
-  position: relative;
-  .particles {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.4;
-  }
 
   .details {
     @include display(flex, row, unset, center);
@@ -53,7 +44,7 @@
       }
 
       .mainText {
-        @include text(500, 18px, $commonFontFamily, $textColor);
+        @include text(500, 22px, $commonFontFamily, $textColor);
         text-decoration: none;
         line-height: 30px;
         letter-spacing: 1.1px;

@@ -2,7 +2,7 @@
 @import "../common/styles/sass/mixins";
 
 .main {
-    @include display(flex,row,center,unset);
-    width: 100%;
-    background-color: $secondBgColor;
+  @include display(flex, row, center, unset);
+  width: 100%;
+  background-color: $secondBgColor;
 }

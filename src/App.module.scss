@@ -1,5 +1,30 @@
+@import "common/styles/sass/variable.sccs";
+
 .app {
   margin-left: 350px;
+  position: relative;
+
+  .particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+  }
+
+  .section {
+    > div {
+      &:nth-child(n) {
+        background-color: $secondBgColor;
+      }
+
+      &:nth-child(2n) {
+        background-color: $bgColor;
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
