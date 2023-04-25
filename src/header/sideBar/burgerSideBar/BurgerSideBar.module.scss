@@ -3,34 +3,27 @@
 //box-shadow: 0 9px 18px 10px rgba(0, 0, 0, 0.5);
 
 .burgerSideBar {
-  display: none;
-  position: relative;
-  //background-color: aquamarine;
-  width: 320px;
   height: 100%;
-  //display: none;
+  display: none;
   .burgerSideBarBtn {
     position: absolute;
     width: 50px;
     height: 50px;
-    //background-color: $secondBgColor;
     background-image: url("../../../access/img/menu.png");
     background-repeat: no-repeat;
     background-position: center;
     z-index: 3;
     right: 0;
-    /*right: 281px;
-    transform: translate(562%,0);
-    transition: 3s;*/
   }
-  .burgerSideBarBtnOpen {
+  /*.burgerSideBarBtnOpen {
     transform: translate(0.5%,0);
     transition: 3s;
-  }
+  }*/
   .burgerSideBarNavBlock {
     @include display(flex, column, center, center);
-    transform: translate(112%,0);
+    transform: translate(100%,0);
     transition: 3s;
+    box-shadow: 0 9px 18px 10px rgba(0, 0, 0, 0.5);
     width: 320px;
     height: 100vh;
     gap: 20px;
@@ -38,8 +31,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    //bottom: 0;
-    //left: 0;
 
     a {
       text-decoration: none;
@@ -51,14 +42,12 @@
       }
     }
   }
-  //}
   .show {
-    transform: translate(12%,0);
+    transform: translate(0,0);
     transition: 3s;
   }
   @media screen and (max-width: 768px) {
     @include display(block, unset, unset, unset);
-
   }
 }
 

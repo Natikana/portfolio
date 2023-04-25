@@ -16,21 +16,26 @@ export const BurgerSideBar = () => {
                  onClick={handlerOpenBurger}></div>
             <nav className={openBurger ? `${cl.burgerSideBarNavBlock} ${cl.show} ` : cl.burgerSideBarNavBlock}>
                 {links.map((el, i) => {
-                        return <Link
-                            activeClass={cl.active}
-                            className={`${text.generelText} ${cl.mainText}`} key={i}
-                            to={el.href}
-                            spy={true}
-                            smooth={true}
-                            hashSpy={true}
-                            offset={1}
-                            duration={1000}
-                            delay={1000}
-                            isDynamic={true}
-                            ignoreCancelEvents={false}
-                            spyThrottle={500}
-                        >{el.title}
-                        </Link>
+                        return (
+                            <Link
+                                onClick={handlerOpenBurger}
+                                activeClass={cl.active}
+                                className={`${text.generelText} ${cl.mainText}`}
+                                key={i}
+                                to={el.href}
+                                spy={true}
+                                smooth={true}
+                                hashSpy={true}
+                                offset={1}
+                                duration={1000}
+                                delay={1000}
+                                isDynamic={true}
+                                ignoreCancelEvents={false}
+                                spyThrottle={500}
+                            >{el.title}
+                            </Link>
+                        )
+
                     }
                 )}
             </nav>

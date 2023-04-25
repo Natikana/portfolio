@@ -8,12 +8,16 @@
   .link {
     position: relative;
     text-decoration: none;
-
+    &:hover {
+      filter: brightness(70%);
+    }
     .projectImg {
       width: 100%;
       height: 260px;
       object-fit: cover;
+
     }
+
     span {
       &:hover {
         color: $secondTextColor;

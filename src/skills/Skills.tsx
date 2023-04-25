@@ -5,22 +5,23 @@ import Fade from "react-reveal/Fade";
 import {v1} from "uuid";
 import sectionCommon from "../common/styles/Common.module.scss";
 import {Title} from "../common/components/title/Title";
+import percent from "../access/img/percent75.png"
 
 
 export const Skills = () => {
     const [skills, setSkills] = useState<SkillType[]>([
-        {id: v1(), skill: 'React', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'Javascript (ES6+)', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'Typescript', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'Redux', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'Material UI', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'Axios', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'HTML', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'CSS', img: ''},
-        {id: v1(), skill: 'REST API', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'TDD', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'Postman', img: 'http://www.w3.org/2000/svg'},
-        {id: v1(), skill: 'Git (GitHub)', img: 'http://www.w3.org/2000/svg'},
+        {id: v1(), skill: 'React', img: percent},
+        {id: v1(), skill: 'Javascript (ES6+)', img: percent},
+        {id: v1(), skill: 'Typescript', img: percent},
+        {id: v1(), skill: 'Redux', img: percent},
+        {id: v1(), skill: 'Material UI', img: percent},
+        {id: v1(), skill: 'Axios', img: percent},
+        {id: v1(), skill: 'HTML', img: percent},
+        {id: v1(), skill: 'CSS', img: percent},
+        {id: v1(), skill: 'REST API', img: percent},
+        {id: v1(), skill: 'TDD', img: percent},
+        {id: v1(), skill: 'Postman', img: percent},
+        {id: v1(), skill: 'Git (GitHub)', img: percent},
     ])
     return (<div id={"skills"} className={`${sectionCommon.section} ${cl.skills}`}>
             <Fade right duration={3000}>

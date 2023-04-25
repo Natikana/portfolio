@@ -11,7 +11,7 @@ export type SkillType = {
 
 export const Skill = (props: SkillType) => {
     return (<div className={cl.skillSection}>
-            <img src={props.img} alt={props.skill} width={'20px'} height={'20px'}/>
+            <img src={props.img} alt={props.skill} width={'100px'} height={'100px'}/>
             <span className={text.generelText}>{props.skill}</span>
         </div>
 

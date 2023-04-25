@@ -49,7 +49,7 @@ export const AboutMe = () => {
                         </div>
                     </div>
                 </div>
-            </Fade>
+           </Fade>
         </div>
     )
 }

@@ -8,6 +8,7 @@ import {Freelance} from "./freelance/Freelance";
 import {Contact} from "./contact/Contact";
 import {loadFull} from "tsparticles";
 import Particles from "react-tsparticles";
+import Fade from "react-reveal/Fade";
 
 function App() {
     const particlesInit = useCallback(async (engine: any) => {
@@ -23,7 +24,7 @@ function App() {
                 className={cl.particles}
                 id="tsparticles"
                 init={particlesInit}
-                options={{
+               options={{
                     background: {
                         color: {
                             value: "#eeeded",
@@ -103,6 +104,7 @@ function App() {
                 <Projects/>
                 <Freelance/>
                 <Contact/>
+
             </div>
         </div>
     )
