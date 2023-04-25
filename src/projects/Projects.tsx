@@ -14,13 +14,14 @@ export type ProjectsType = {
     id: string
     img: string
     titleProject: string
+    link: string
 }
 export const Projects = () => {
     const [projects, SetProjects] = useState<ProjectsType[]>([
-        {id: v1(), img: shelter, titleProject: 'SHELTER'},
-        {id: v1(), img: bookShop, titleProject: 'BOOK SHOP'},
-        {id: v1(), img: socialNetwork, titleProject: 'APP FOR SOCIAL NETWORK '},
-        {id: v1(), img: tracking, titleProject: 'APP FOR TASK TRACING'},
+        {id: v1(), img: shelter, titleProject: 'SHELTER',link:'https://natikana.github.io/Shelter/main/'},
+        {id: v1(), img: bookShop, titleProject: 'BOOK SHOP',link:'https://natikana.github.io/Book_shop'},
+        {id: v1(), img: socialNetwork, titleProject: 'APP FOR SOCIAL NETWORK',link:''},
+        {id: v1(), img: tracking, titleProject: 'APP FOR TASK TRACING',link:''},
     ])
     /*const shelterImg = {
         backgroundImage:`url(${shelter})`
@@ -32,6 +33,7 @@ export const Projects = () => {
                     {projects.map(el => {
                         return (
                             <Project
+                                link={el.link}
                                 key={el.id}
                                 img={el.img}
                                 titleProject={el.titleProject}

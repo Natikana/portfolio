@@ -11,7 +11,7 @@ import percent from "../access/img/percent75.png"
 export const Skills = () => {
     const [skills, setSkills] = useState<SkillType[]>([
         {id: v1(), skill: 'React', img: percent},
-        {id: v1(), skill: 'Javascript (ES6+)', img: percent},
+        {id: v1(), skill: 'Javascript', img: percent},
         {id: v1(), skill: 'Typescript', img: percent},
         {id: v1(), skill: 'Redux', img: percent},
         {id: v1(), skill: 'Material UI', img: percent},

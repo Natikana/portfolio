@@ -22,7 +22,7 @@
   .burgerSideBarNavBlock {
     @include display(flex, column, center, center);
     transform: translate(100%,0);
-    transition: 3s;
+    transition: 2s;
     box-shadow: 0 9px 18px 10px rgba(0, 0, 0, 0.5);
     width: 320px;
     height: 100vh;
@@ -44,7 +44,7 @@
   }
   .show {
     transform: translate(0,0);
-    transition: 3s;
+    transition: 2s;
   }
   @media screen and (max-width: 768px) {
     @include display(block, unset, unset, unset);
