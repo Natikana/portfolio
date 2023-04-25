@@ -13,8 +13,7 @@ export const SideBar = () => {
 
     return (
         <div className={cl.sideBar}>
-            <div className={cl.sideBarBlock}>
-                <h3>WARSAW</h3>
+           {/* <div className={cl.sideBarBlock}>*/}
                 <nav className={cl.navBlock}>
                     {links.map((el, i) => {
                             return <Link
@@ -36,7 +35,7 @@ export const SideBar = () => {
                         }
                     )}
                 </nav>
-            </div>
+            {/*</div>*/}
         </div>
 
     )

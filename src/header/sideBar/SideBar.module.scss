@@ -5,20 +5,13 @@
 .sideBar {
   display: flex;
 
-  .sideBarBlock {
-    @include display(flex,column,center,unset);
-    padding: 0 70px;
-    width: 100%;
-
-    h3 {
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: 4px;
-    }
+  /*.sideBarBlock {
+    @include display(flex, column, unset, flex-start);
+    width: 100%;*/
 
     .navBlock {
       @include display(flex, column, flex-start, unset);
-      height: auto;
+      gap: 5px;
 
       a {
         text-decoration: none;
@@ -30,7 +23,7 @@
         }
       }
     }
-  }
+  //}
 
   @media screen and (max-width: 768px) {
     display: none;

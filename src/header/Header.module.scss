@@ -1,27 +1,31 @@
 @import "../common/styles/sass/mixins";
 
 .header {
-  @include display(flex, column, space-around, center);
+  @include display(flex, column, center, flex-start);
   background-color: #fffdfd;
   height: 100vh;
   width: 350px;
   position: fixed;
   top: 0;
   left: 0;
-  h3 {
-    visibility:hidden;
+  padding: 100px 75px;
+  gap: 50px;
+
+  .headerTitle {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 4px;
   }
 
   @media screen and (max-width: 768px) {
-    @include display(flex, column, center, flex-start);
+    @include display(flex, row, space-between, center);
     padding: 0 20px;
     height: 50px;
     width: 100%;
     right: 0;
     z-index: 12;
-    h3 {
-      visibility:unset;
-      font-weight: 900;
+    box-shadow: unset;
+    .headerTitle {
       left: 20px;
     }
   }

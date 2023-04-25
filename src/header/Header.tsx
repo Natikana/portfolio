@@ -7,7 +7,7 @@ import {BurgerSideBar} from "./sideBar/burgerSideBar/BurgerSideBar";
 export const Header = () => {
     return (
         <div className={cl.header}>
-            <h3>WARSAW</h3>
+            <h3 className={cl.headerTitle}>WARSAW</h3>
             <SideBar/>
             <BurgerSideBar/>
             <Footer/>
