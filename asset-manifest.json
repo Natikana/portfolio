@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c819f990.css",
-    "main.js": "/portfolio/static/js/main.970b65eb.js",
+    "main.css": "/portfolio/static/css/main.183e3ba2.css",
+    "main.js": "/portfolio/static/js/main.966a19f1.js",
+    "static/media/cv.png": "/portfolio/static/media/cv.7a7b235c3ca1f09f9a85.png",
     "static/media/tracking.jpg": "/portfolio/static/media/tracking.655779fc8acd0803c7a7.jpg",
     "static/media/cv-foto.jpg": "/portfolio/static/media/cv-foto.49f9d9487fb7f4388d73.jpg",
     "static/media/Mulish-VariableFont_wght.ttf": "/portfolio/static/media/Mulish-VariableFont_wght.628167929650ba4a16c7.ttf",
@@ -11,11 +12,11 @@
     "static/media/social-network.jpg": "/portfolio/static/media/social-network.df97c8831956e2e01b00.jpg",
     "static/media/book-shop.jpg": "/portfolio/static/media/book-shop.199626ce4ca7da4234e7.jpg",
     "index.html": "/portfolio/index.html",
-    "main.c819f990.css.map": "/portfolio/static/css/main.c819f990.css.map",
-    "main.970b65eb.js.map": "/portfolio/static/js/main.970b65eb.js.map"
+    "main.183e3ba2.css.map": "/portfolio/static/css/main.183e3ba2.css.map",
+    "main.966a19f1.js.map": "/portfolio/static/js/main.966a19f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.c819f990.css",
-    "static/js/main.970b65eb.js"
+    "static/css/main.183e3ba2.css",
+    "static/js/main.966a19f1.js"
   ]
 }
