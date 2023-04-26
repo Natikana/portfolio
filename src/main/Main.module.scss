@@ -1,8 +1,0 @@
-@import "../common/styles/sass/variable.sccs";
-@import "../common/styles/sass/mixins";
-
-.main {
-  @include display(flex, row, center, unset);
-  width: 100%;
-  background-color: $secondBgColor;
-}

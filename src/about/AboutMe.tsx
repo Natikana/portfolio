@@ -1,8 +1,8 @@
 import React from "react";
 import cl from "./AboutMe.module.scss"
-import fb from "../../access/socialLogo/fb.png"
-import inL from "../../access/socialLogo/in.png"
-import gh from "../../access/socialLogo/gh.png"
+import fb from "../access/socialLogo/fb.png"
+import inL from "../access/socialLogo/in.png"
+import gh from "../access/socialLogo/gh.png"
 import {v1} from "uuid";
 import Fade from "react-reveal/Fade";
 import ReactTypingEffect from "react-typing-effect";
@@ -25,15 +25,13 @@ export const AboutMe = () => {
 
     return (
         <div id={"aboutMe"} className={cl.aboutMe}>
-            <Fade right duration={3000}>
+            <Fade clear duration={3000}>
                 <div className={cl.details}>
                     <div className={cl.aboutMeFotoBlock}>
-                        <div className={cl.foto}></div>
-                        {/* <img className={cl.aboutMeFoto} src={cvFoto} height={'270px'} width={'270px'} alt={'fotoCV'}/>*/}
+                        <div className={cl.fotoCV}></div>
                     </div>
                     <div className={cl.aboutMeDescrbPart}>
                         <h1 className={cl.aboutMeTitle}>NATALLIA MASHKOUSKAYA</h1>
-                        {/*<span className={cl.mainText}>I am a Frontend Developer</span>*/}
                         <ReactTypingEffect
                             className={cl.mainText} text={"I am a Frontend Developer"}
                         />
@@ -49,7 +47,7 @@ export const AboutMe = () => {
                         </div>
                     </div>
                 </div>
-           </Fade>
+            </Fade>
         </div>
     )
 }

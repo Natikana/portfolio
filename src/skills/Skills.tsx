@@ -24,7 +24,7 @@ export const Skills = () => {
         {id: v1(), skill: 'Git', img: percent},
     ])
     return (<div id={"skills"} className={`${sectionCommon.section} ${cl.skills}`}>
-            <Fade right duration={3000}>
+            <Fade clear duration={3000}>
                 <Title text={'Skills'} title={'Programming Skills'}/>
                 <div className={cl.skillsSection}>
                     {skills.map(el => {

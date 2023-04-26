@@ -9,7 +9,7 @@ import cv from "../access/cv/cv.png"
 
 export const Freelance = () => {
     return (<div id={"freelance"} className={sectionCommon.section}>
-            <Fade right duration={3000}>
+            <Fade clear duration={3000}>
                 <Title text={'Freelance'} title={'My Freelance'}/>
                 <div className={cl.freelanceSection}>
                     <span className={`${text.generelText} ${cl.textMain}`}>I Am Available For Freelance Work</span>

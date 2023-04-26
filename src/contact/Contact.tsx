@@ -25,7 +25,7 @@ export const Contact = () => {
     };
 
     return (<div id={'contact'} className={`${sectionCommon.section} ${cl.contact}`}>
-            <Fade right duration={3000}>
+            <Fade clear duration={3000}>
                 <Title text={'Contact'} title={'Get in Touch'}/>
                 <div className={cl.contactBlock}>
                     <div className={cl.mapSection}>

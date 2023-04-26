@@ -27,7 +27,7 @@ export const Projects = () => {
         backgroundImage:`url(${shelter})`
     }*/
     return (<div id={"projects"} className={`${sectionCommon.section} ${cl.projects}`}>
-        <Fade right duration={3000}>
+        <Fade clear duration={3000}>
                 <Title text={'Projects'} title={'Creative Projects'}/>
                 <div className={cl.projectsSection}>
                     {projects.map(el => {

@@ -1,6 +1,5 @@
 import React, {useCallback} from 'react';
 import {Header} from "./header/Header";
-import {Main} from "./main/Main";
 import cl from "./App.module.scss"
 import {Skills} from "./skills/Skills";
 import {Projects} from "./projects/Projects";
@@ -8,7 +7,7 @@ import {Freelance} from "./freelance/Freelance";
 import {Contact} from "./contact/Contact";
 import {loadFull} from "tsparticles";
 import Particles from "react-tsparticles";
-import Fade from "react-reveal/Fade";
+import {AboutMe} from "./about/AboutMe";
 
 function App() {
     const particlesInit = useCallback(async (engine: any) => {
@@ -99,12 +98,11 @@ function App() {
             />
             <Header/>
             <div className={cl.section}>
-                <Main/>
+                <AboutMe/>
                 <Skills/>
                 <Projects/>
                 <Freelance/>
                 <Contact/>
-
             </div>
         </div>
     )

@@ -1,0 +1,87 @@
+@import "../common/styles/sass/mixins";
+
+
+.aboutMe {
+  @include display(flex, row, center, center);
+  padding: 0 40px;
+  height: 100vh;
+  width: 100%;
+
+  .details {
+    @include display(flex, row, unset, center);
+
+    .aboutMeFotoBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      border: 10px solid rgb(133 133 133 / 64%);
+      border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+      box-shadow: inset 0 0 0 9px rgba(255, 255, 255, .3);
+      animation: foto 8s ease-in-out infinite 1s;
+      overflow: hidden;
+
+      @keyframes foto {
+        0% {
+          border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+          box-shadow: 15px 15px 50px rgba(255, 255, 255, .3);
+        }
+        25% {
+          border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+        }
+        50% {
+          border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+          box-shadow: -10px -5px 50px rgba(255, 255, 255, .3);
+        }
+        75% {
+          border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+        }
+      }
+
+      .fotoCV {
+        background-image: url("../access/img/cv-foto.jpg");
+        width: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+      }
+    }
+
+    .aboutMeDescrbPart {
+      @include display(flex, column, flex-start, unset);
+      gap: 30px;
+      margin-left: 80px;
+
+      h1 {
+        @include text(900, 35px, $commonFontFamily, $titleColor);
+      }
+
+      .mainText {
+        @include text(500, 22px, $commonFontFamily, $textColor);
+        text-decoration: none;
+        line-height: 30px;
+        letter-spacing: 1.1px;
+      }
+
+      .aboutMeSocialIcons {
+        @include display(flex, row, flex-start, unset);
+        gap: 20px;
+      }
+
+      @media screen and (max-width: 1040px) {
+        margin: 40px 0 0;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 1040px) {
+      flex-direction: column;
+    }
+  }
+}
+
+
+
