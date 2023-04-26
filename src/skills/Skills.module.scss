@@ -1,11 +1,13 @@
 @import "../common/styles/sass/variable.sccs";
 
-
 .skillsSection {
   display: flex;
   flex-wrap: wrap;
   min-height: 300px;
   gap: 85px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 
