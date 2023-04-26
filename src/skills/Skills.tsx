@@ -21,7 +21,7 @@ export const Skills = () => {
         {id: v1(), skill: 'REST API', img: percent},
         {id: v1(), skill: 'TDD', img: percent},
         {id: v1(), skill: 'Postman', img: percent},
-        {id: v1(), skill: 'Git (GitHub)', img: percent},
+        {id: v1(), skill: 'Git', img: percent},
     ])
     return (<div id={"skills"} className={`${sectionCommon.section} ${cl.skills}`}>
             <Fade right duration={3000}>
