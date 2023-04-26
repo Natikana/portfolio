@@ -15,7 +15,12 @@
       height: 44px;
       margin-top: 30px;
     }
-
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
     .contactTextarea {
       height: 120px;
       margin-bottom: 50px;

@@ -4,6 +4,7 @@
   "homepage": "https://natikana.github.io/portfolio",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
@@ -20,6 +21,7 @@
     "@types/react-scroll": "^1.8.6",
     "@types/sass": "^1.45.0",
     "@types/uuid": "^9.0.1",
+    "emailjs": "^4.0.1",
     "gh-pages": "^5.0.0",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",

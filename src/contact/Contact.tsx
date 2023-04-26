@@ -1,12 +1,29 @@
-import React from "react";
+import React, {DetailedHTMLProps, FormEvent, FormEventHandler, FormHTMLAttributes} from "react";
 import cl from "./Contact.module.scss"
 import btn from "../common/styles/Common.module.scss";
 import text from "../common/styles/Common.module.scss";
 import sectionCommon from "../common/styles/Common.module.scss";
 import {Title} from "../common/components/title/Title";
 import Fade from "react-reveal/Fade";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 export const Contact = () => {
+    const form = useRef(null);
+
+    const sendEmail = (e:FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_5s2l2af', 'template_czia9qw', form.current, 'nHa0h8657FwRch5W8')
+            .then((result:any) => {
+                console.log(result.text);
+                console.log('sent')
+            }, (error:any) => {
+                console.log(error.text);
+            });
+    };
+
     return (<div id={'contact'} className={`${sectionCommon.section} ${cl.contact}`}>
             <Fade right duration={3000}>
                 <Title text={'Contact'} title={'Get in Touch'}/>
@@ -18,11 +35,11 @@ export const Contact = () => {
                             referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
-                    <form className={cl.contactForm}>
-                        <input className={cl.contactInput} id="name" type="text" placeholder="Name"/>
-                        <input className={cl.contactInput} id="email" type="text" placeholder="Email"/>
-                        <textarea className={cl.contactTextarea} id="message" placeholder="Message"></textarea>
-                        <button type={"submit"} className={btn.commonBtn}>
+                    <form className={cl.contactForm} ref={form} onSubmit={sendEmail}>
+                        <input className={cl.contactInput} id="name"  type="text" name="user_name" placeholder="Name"/>
+                        <input className={cl.contactInput}  id="email" type="text" name="user_email" placeholder="Email"/>
+                        <textarea className={cl.contactTextarea} id="message" name="message" placeholder="Message"></textarea>
+                        <button type={"submit"} value="Send" className={btn.commonBtn}>
                             <span className={`${text.generelText} ${cl.textBtn}`}>Send message</span>
                         </button>
                     </form>
