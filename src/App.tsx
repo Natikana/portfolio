@@ -23,7 +23,7 @@ function App() {
                 className={cl.particles}
                 id="tsparticles"
                 init={particlesInit}
-               options={{
+                options={{
                     background: {
                         color: {
                             value: "#eeeded",
@@ -90,7 +90,7 @@ function App() {
                             type: "circle",
                         },
                         size: {
-                            value: { min: 1, max: 5 },
+                            value: {min: 1, max: 5},
                         },
                     },
                     detectRetina: true,

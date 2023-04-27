@@ -10,6 +10,5 @@ export const Footer = () => {
                 <p>Natallia Mashkouskaya</p>
             </span>
         </div>
-
     )
 }

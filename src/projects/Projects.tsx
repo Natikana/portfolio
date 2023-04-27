@@ -18,16 +18,14 @@ export type ProjectsType = {
 }
 export const Projects = () => {
     const [projects, SetProjects] = useState<ProjectsType[]>([
-        {id: v1(), img: shelter, titleProject: 'SHELTER',link:'https://natikana.github.io/Shelter/main/'},
-        {id: v1(), img: bookShop, titleProject: 'BOOK SHOP',link:'https://natikana.github.io/Book_shop'},
-        {id: v1(), img: socialNetwork, titleProject: 'APP FOR SOCIAL NETWORK',link:''},
-        {id: v1(), img: tracking, titleProject: 'APP FOR TASK TRACING',link:''},
+        {id: v1(), img: shelter, titleProject: 'SHELTER', link: 'https://natikana.github.io/Shelter/main/'},
+        {id: v1(), img: bookShop, titleProject: 'BOOK SHOP', link: 'https://natikana.github.io/Book_shop'},
+        {id: v1(), img: socialNetwork, titleProject: 'APP FOR SOCIAL NETWORK', link: ''},
+        {id: v1(), img: tracking, titleProject: 'APP FOR TASK TRACING', link: ''},
     ])
-    /*const shelterImg = {
-        backgroundImage:`url(${shelter})`
-    }*/
+
     return (<div id={"projects"} className={`${sectionCommon.section} ${cl.projects}`}>
-        <Fade clear duration={3000}>
+            <Fade clear duration={3000}>
                 <Title text={'Projects'} title={'Creative Projects'}/>
                 <div className={cl.projectsSection}>
                     {projects.map(el => {
@@ -42,7 +40,7 @@ export const Projects = () => {
                         )
                     })}
                 </div>
-        </Fade>
+            </Fade>
         </div>
     )
 }

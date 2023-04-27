@@ -5,6 +5,7 @@
 .burgerSideBar {
   height: 100%;
   display: none;
+
   .burgerSideBarBtn {
     position: absolute;
     width: 50px;
@@ -18,7 +19,7 @@
 
   .burgerSideBarNavBlock {
     @include display(flex, column, center, center);
-    transform: translate(120%,0);
+    transform: translate(120%, 0);
     transition: 2s;
     box-shadow: 0 9px 18px 10px rgba(0, 0, 0, 0.5);
     width: 320px;
@@ -39,10 +40,12 @@
       }
     }
   }
+
   .show {
-    transform: translate(6px,0);
+    transform: translate(6px, 0);
     transition: 2s;
   }
+
   @media screen and (max-width: 768px) {
     @include display(block, unset, unset, unset);
   }
