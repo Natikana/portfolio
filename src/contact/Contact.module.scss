@@ -2,10 +2,14 @@
 @import "../common/styles/sass/mixins";
 
 .contactMessage {
+  @include text(600,15px,$commonFontFamily,#3a00ff);
   margin-top: 5px;
-  color: #3a00ff;
+  /*color: #3a00ff;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 600;*/
+}
+.contactError {
+  color: #f52225;;
 }
 
 .contactForm {
@@ -31,12 +35,13 @@
 
   .contactTextarea {
     height: 120px;
-    margin-bottom: 50px;
   }
-
-  .textBtn {
-    color: white;
-    font-size: 15px;
+  .btn {
+    margin-top: 50px;
+    .textBtn {
+      color: white;
+      font-size: 15px;
+    }
   }
 
   @media screen and (max-width: 768px) {

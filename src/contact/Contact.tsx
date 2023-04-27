@@ -1,44 +1,63 @@
-import React, {ChangeEvent, DetailedHTMLProps, FormEvent, FormEventHandler, FormHTMLAttributes, useState} from "react";
+import React, {useState} from "react";
 import cl from "./Contact.module.scss"
 import btn from "../common/styles/Common.module.scss";
 import text from "../common/styles/Common.module.scss";
 import sectionCommon from "../common/styles/Common.module.scss";
 import {Title} from "../common/components/title/Title";
 import Fade from "react-reveal/Fade";
-import {useRef} from 'react';
 import emailjs from '@emailjs/browser';
+import {useFormik} from 'formik';
+import * as Yup from 'yup';
 
 
 export const Contact = () => {
-    const [clean, setClean] = useState<string>('')
-    const [clean1, setClean1] = useState<string>('')
-    const [clean2, setClean2] = useState<string>('')
-    const [disabled, setDisabled] = useState<boolean>(false)
-    const [message, setMessage] = useState<string>('')
-    const [load, setLoad] = useState<'success' | 'failed' | null>(null)
 
-    const form = useRef(null);
-    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+    const [load, setLoad] = useState<'success' | 'failed' | 'idle'>('idle')
 
-        setDisabled(true)
-        emailjs.sendForm('service_5s2l2af', 'template_czia9qw', form.current, 'nHa0h8657FwRch5W8')
-            .then((result: any) => {
-                    console.log(result.text);
+    const formik = useFormik({
+
+        initialValues: {
+            from_name: '',
+            to_name: 'template_czia9qw',
+            reply_to: '',
+            message: ''
+        },
+        validationSchema: Yup.object({
+            from_name: Yup.string().min(3, <div className={`${cl.contactMessage} ${cl.contactError}`}>Must be at least 3
+                characters</div>)
+                .max(20, <div className={`${cl.contactMessage} ${cl.contactError}`}>Too Long!</div>)
+                .required(<div className={`${cl.contactMessage} ${cl.contactError}`}>Name field is required</div>),
+            reply_to: Yup.string()
+                .email(<div className={`${cl.contactMessage} ${cl.contactError}`}>Invalid email address</div>)
+                .required(<div className={`${cl.contactMessage} ${cl.contactError}`}>Email field is required</div>),
+            message: Yup.string()
+                .min(4, <div className={`${cl.contactMessage} ${cl.contactError}`}>Must be at least 4 characters</div>)
+                .required(<div className={`${cl.contactMessage} ${cl.contactError}`}>Message field is required</div>)
+        }),
+        onSubmit: (values) => {
+
+            emailjs.send('service_5s2l2af', 'template_czia9qw', values, 'nHa0h8657FwRch5W8')
+                .then((res: {}) => {
+                    console.log(res)
                     console.log('sent')
-                    setDisabled(false)
                     setLoad('success')
                     setTimeout(() => {
-                        setLoad(null)
-                    },4000)
-
-                },
-                (error: any) => {
-                    console.log(error.text);
+                        setLoad('idle')
+                    }, 4000)
+                    formik.setSubmitting(false);
+                    formik.resetForm();
+                })
+                .catch((error: {}) => {
+                    console.log(error)
+                    formik.setSubmitting(false);
                     setLoad('failed')
-                });
-    };
+                    setTimeout(() => {
+                        setLoad('idle')
+                    }, 4000)
+                })
 
+        },
+    });
 
     return (<div id={'contact'} className={`${sectionCommon.section} ${cl.contact}`}>
             <Fade clear duration={3000}>
@@ -52,27 +71,43 @@ export const Contact = () => {
                         </iframe>
                     </div>
 
-                   {load === 'success' && <div className={cl.contactMessage}>Your message has been received, I will contact you soon.</div>}
+                    {load === 'success'
+                        && <div className={cl.contactMessage}>
+                            Your message has been received, I will contact you soon
+                        </div>}
+                    {load === 'failed' &&
+                        <div className={cl.contactMessage}>Problem with Network</div>}
 
-                    <form className={cl.contactForm} ref={form} onSubmit={sendEmail}>
-                        <input onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                            setClean(e.currentTarget.value)
-                        }} value={clean} className={cl.contactInput} id="name" type="text" name="user_name"
-                               placeholder="Name"/>
-                        <input onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                            setClean1(e.currentTarget.value)
-                        }} value={clean1} className={cl.contactInput} id="email" type="text" name="user_email"
-                               placeholder="Email"/>
-                        <textarea onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
-                            setClean2(e.currentTarget.value)
-                        }} value={clean2} className={cl.contactTextarea} id="message" name="message"
-                                  placeholder="Message"></textarea>
-                        <button disabled={disabled} style={disabled ? {backgroundColor: 'darkgray'} : {backgroundColor: ''}}
-                                type={"submit"} value="Send" className={btn.commonBtn} onClick={() => {
-                            setClean('');
-                            setClean1('');
-                            setClean2('')
-                        }}>
+                    <form className={cl.contactForm} onSubmit={formik.handleSubmit}>
+                        <label htmlFor="from_name"/>
+                        <input
+                            className={cl.contactInput}
+                            id="from_name"
+                            autoComplete="off"
+                            placeholder="Name"
+                            {...formik.getFieldProps('from_name')}
+                        />
+                        {formik.touched.from_name && formik.errors.from_name && <div>{formik.errors.from_name}</div>}
+
+                        <label className={cl.contactMessage} htmlFor="reply_to"/>
+                        <input
+                            className={cl.contactInput}
+                            id="reply_to"
+                            placeholder="Email"
+                            autoComplete="off"
+                            {...formik.getFieldProps('reply_to')}
+                        />
+                        {formik.touched.reply_to && formik.errors.reply_to && <div>{formik.errors.reply_to}</div>}
+                        <label htmlFor="message"/>
+                        <textarea className={cl.contactTextarea} id="message" placeholder="Message"
+                                  autoComplete="off"
+                                  {...formik.getFieldProps('message')}
+                        />
+                        {formik.touched.message && formik.errors.message && <div>{formik.errors.message}</div>}
+
+                        <button disabled={formik.isSubmitting}
+                                style={formik.isSubmitting ? {backgroundColor: 'darkgray'} : {backgroundColor: ''}}
+                                className={`${btn.commonBtn} ${cl.btn}`} type="submit">
                             <span className={`${text.generelText} ${cl.textBtn}`}>Send message</span>
                         </button>
                     </form>
