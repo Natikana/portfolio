@@ -1,7 +1,7 @@
 @import "../common/styles/sass/variable.sccs";
 @import "../common/styles/sass/mixins";
 
-.contactMessage {
+.contactMessage, .contactSending {
   @include text(600, 15px, $commonFontFamily, #3a00ff);
   margin-top: 5px;
 }
@@ -14,7 +14,7 @@
   @include display(flex, column, unset, flex-start);
 
   .contactInput, .contactTextarea {
-    @include text(unset, 15px, $commonFontFamily, $secondTextColor);
+    @include text(600, 15px, $commonFontFamily, $textColor);
     width: 100%;
     border: 1px solid rgba(0, 0, 0, .2);
     background-color: transparent;

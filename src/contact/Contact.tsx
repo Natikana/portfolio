@@ -76,35 +76,30 @@ export const Contact = () => {
                             Your message has been received, I will contact you soon
                         </div>}
                     {load === 'failed' &&
-                        <div className={cl.contactMessage}>Problem with Network</div>}
+                        <div className={`${cl.contactMessage} ${cl.contactError}`}>Problem with Network</div>}
 
                     <form className={cl.contactForm} onSubmit={formik.handleSubmit}>
-                        <label htmlFor="from_name"/>
                         <input
                             className={cl.contactInput}
                             id="from_name"
-                            autoComplete="off"
                             placeholder="Name"
                             {...formik.getFieldProps('from_name')}
                         />
                         {formik.touched.from_name && formik.errors.from_name && <div>{formik.errors.from_name}</div>}
-
-                        <label className={cl.contactMessage} htmlFor="reply_to"/>
                         <input
                             className={cl.contactInput}
                             id="reply_to"
                             placeholder="Email"
-                            autoComplete="off"
                             {...formik.getFieldProps('reply_to')}
                         />
                         {formik.touched.reply_to && formik.errors.reply_to && <div>{formik.errors.reply_to}</div>}
-                        <label htmlFor="message"/>
-                        <textarea className={cl.contactTextarea} id="message" placeholder="Message"
-                                  autoComplete="off"
+                        <textarea className={cl.contactTextarea}
+                                  id="message"
+                                  placeholder="Message"
                                   {...formik.getFieldProps('message')}
                         />
                         {formik.touched.message && formik.errors.message && <div>{formik.errors.message}</div>}
-
+                        {formik.isSubmitting && <div className={cl.contactSending}>Sending your message...</div>}
                         <button disabled={formik.isSubmitting}
                                 style={formik.isSubmitting ? {backgroundColor: 'darkgray'} : {backgroundColor: ''}}
                                 className={`${btn.commonBtn} ${cl.btn}`} type="submit">
