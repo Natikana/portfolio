@@ -38,8 +38,6 @@ export const Contact = () => {
 
             emailjs.send('service_5s2l2af', 'template_czia9qw', values, 'nHa0h8657FwRch5W8')
                 .then((res: {}) => {
-                    console.log(res)
-                    console.log('sent')
                     setLoad('success')
                     setTimeout(() => {
                         setLoad('idle')
@@ -98,8 +96,10 @@ export const Contact = () => {
                                   placeholder="Message"
                                   {...formik.getFieldProps('message')}
                         />
+                        
                         {formik.touched.message && formik.errors.message && <div>{formik.errors.message}</div>}
                         {formik.isSubmitting && <div className={cl.contactSending}>Sending your message...</div>}
+
                         <button disabled={formik.isSubmitting}
                                 style={formik.isSubmitting ? {backgroundColor: 'darkgray'} : {backgroundColor: ''}}
                                 className={`${btn.commonBtn} ${cl.btn}`} type="submit">

@@ -5,23 +5,23 @@ import Fade from "react-reveal/Fade";
 import {v1} from "uuid";
 import sectionCommon from "../common/styles/Common.module.scss";
 import {Title} from "../common/components/title/Title";
-import percent from "../access/img/percent75.png"
+import inProgress from "../access/img/work-progress.png"
 
 
 export const Skills = () => {
     const [skills, setSkills] = useState<SkillType[]>([
-        {id: v1(), skill: 'React', img: percent},
-        {id: v1(), skill: 'Javascript', img: percent},
-        {id: v1(), skill: 'Typescript', img: percent},
-        {id: v1(), skill: 'Redux', img: percent},
-        {id: v1(), skill: 'Material UI', img: percent},
-        {id: v1(), skill: 'Axios', img: percent},
-        {id: v1(), skill: 'HTML', img: percent},
-        {id: v1(), skill: 'CSS', img: percent},
-        {id: v1(), skill: 'REST API', img: percent},
-        {id: v1(), skill: 'TDD', img: percent},
-        {id: v1(), skill: 'Postman', img: percent},
-        {id: v1(), skill: 'Git', img: percent},
+        {id: v1(), skill: 'React', img: inProgress},
+        {id: v1(), skill: 'Javascript', img: inProgress},
+        {id: v1(), skill: 'Typescript', img: inProgress},
+        {id: v1(), skill: 'Redux', img: inProgress},
+        {id: v1(), skill: 'Material UI', img: inProgress},
+        {id: v1(), skill: 'Axios', img: inProgress},
+        {id: v1(), skill: 'HTML', img: inProgress},
+        {id: v1(), skill: 'CSS', img: inProgress},
+        {id: v1(), skill: 'REST API', img: inProgress},
+        {id: v1(), skill: 'TDD', img: inProgress},
+        {id: v1(), skill: 'Postman', img: inProgress},
+        {id: v1(), skill: 'Git', img: inProgress},
     ])
     return (<div id={"skills"} className={`${sectionCommon.section} ${cl.skills}`}>
             <Fade clear duration={3000}>
