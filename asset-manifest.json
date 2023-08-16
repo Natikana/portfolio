@@ -1,22 +1,20 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.55eafd8c.css",
-    "main.js": "/portfolio/static/js/main.d92fd98c.js",
+    "main.js": "/portfolio/static/js/main.6bf035c4.js",
     "static/media/cv.png": "/portfolio/static/media/cv.7a7b235c3ca1f09f9a85.png",
+    "static/media/flashcards.png": "/portfolio/static/media/flashcards.bfec4d16578c52d88c04.png",
     "static/media/tracking.jpg": "/portfolio/static/media/tracking.655779fc8acd0803c7a7.jpg",
     "static/media/cv-foto.jpg": "/portfolio/static/media/cv-foto.49f9d9487fb7f4388d73.jpg",
     "static/media/Mulish-VariableFont_wght.ttf": "/portfolio/static/media/Mulish-VariableFont_wght.628167929650ba4a16c7.ttf",
-    "static/media/shelter-dog.jpg": "/portfolio/static/media/shelter-dog.6f32c54ce214f6bfd66d.jpg",
     "static/media/Poppins-Medium.ttf": "/portfolio/static/media/Poppins-Medium.c5eb70982e90502d0d01.ttf",
     "static/media/Montserrat-Medium.ttf": "/portfolio/static/media/Montserrat-Medium.a281f04d4c8926e7dea1.ttf",
-    "static/media/social-network.jpg": "/portfolio/static/media/social-network.df97c8831956e2e01b00.jpg",
-    "static/media/book-shop.jpg": "/portfolio/static/media/book-shop.199626ce4ca7da4234e7.jpg",
     "index.html": "/portfolio/index.html",
     "main.55eafd8c.css.map": "/portfolio/static/css/main.55eafd8c.css.map",
-    "main.d92fd98c.js.map": "/portfolio/static/js/main.d92fd98c.js.map"
+    "main.6bf035c4.js.map": "/portfolio/static/js/main.6bf035c4.js.map"
   },
   "entrypoints": [
     "static/css/main.55eafd8c.css",
-    "static/js/main.d92fd98c.js"
+    "static/js/main.6bf035c4.js"
   ]
 }
